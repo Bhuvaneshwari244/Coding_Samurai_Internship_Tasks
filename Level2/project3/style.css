@@ -1,0 +1,134 @@
+/* Styling for Project 3: Interactive To-Do List */
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f7f6;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+    padding-top: 50px;
+    margin: 0;
+}
+
+.container {
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 500px;
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 25px;
+}
+
+/* Input Area Styling */
+.input-area {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+#taskInput {
+    flex-grow: 1;
+    padding: 10px;
+    border: 2px solid #ddd;
+    border-radius: 5px 0 0 5px;
+    font-size: 1em;
+}
+
+#addTaskButton {
+    padding: 10px 15px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#addTaskButton:hover {
+    background-color: #0056b3;
+}
+
+/* Task List Styling */
+#taskList {
+    list-style: none;
+    padding: 0;
+}
+
+#taskList li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    margin-bottom: 10px;
+    background: #e9ecef;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    /* Cursor is set to default now that we have dedicated buttons */
+    cursor: default; 
+}
+
+/* Task Text Styles */
+.task-text {
+    flex-grow: 1;
+    word-break: break-word;
+    margin-right: 10px;
+}
+
+/* Completed Task Styles */
+#taskList li.completed {
+    background: #d4edda; /* Light green background */
+}
+
+#taskList li.completed .task-text {
+    text-decoration: line-through;
+    color: #6c757d;
+}
+
+/* Action Buttons Container */
+.actions {
+    display: flex;
+    align-items: center;
+}
+
+.actions button {
+    padding: 5px 10px;
+    margin-left: 8px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.9em;
+    white-space: nowrap; /* Prevent button text from wrapping */
+}
+
+/* Styles for the new Complete/Unmark Button */
+.actions .complete {
+    background-color: #28a745; /* Green color for Complete */
+    color: white;
+}
+
+#taskList li.completed .complete {
+    background-color: #6c757d; /* Gray for Unmark/Completed state */
+    color: white;
+}
+
+.actions .edit {
+    background-color: #ffc107;
+    color: #333;
+}
+
+.actions .delete {
+    background-color: #dc3545;
+    color: white;
+}
+
+#taskCount {
+    text-align: center;
+    margin-top: 20px;
+    color: #6c757d;
+}
